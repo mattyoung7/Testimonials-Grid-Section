@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.testimonial {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "card-one card-one card-two card-five"
+    "card-three card-four card-four card-five";
+    column-gap: 25px;
+    row-gap: 25px;
+    margin: 100px 150px;
+}
+
+.card {
+    padding: 20px 40px 10px;
+    border-radius: 10px;
+}
+
+.card-one {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right 90px;
+    grid-area: card-one;
+}
+
+.card-two {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: card-two;
+}
+
+.card-three {
+    background-color:hsl(0, 0%, 100%);
+    grid-area: card-three;
+}
+
+.card-four {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: card-four;
+}
+
+.card-five {
+    background-color:hsl(0, 0%, 100%);
+    grid-area: card-five;
+}
+
+.card-light {
+    color: hsl(0, 0%, 100%);
+}
+
+.card-dark {
+    color: hsl(217, 19%, 35%);
+}
+
+.card__image {
+    float: left;
+    height: 25px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: hsl(0, 0%, 100%, 0.4);
+    margin-right: 15px;
+}
+
+.image-jonathan {
+    border-color: hsl(217, 19%, 35%);
+}
+
+.image-patrick {
+    border-color: hsl(263, 55%, 52%);
+}
+
+.card__title {
+    font-size: 13px;
+    margin: 0;
+}
+
+.card__role {
+    font-weight: 500;
+    font-size: 11px;
+    margin: 0;
+    opacity: 0.7;
+}
+
+.card__quote {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.card__text {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.7;
+}
+
+.attribution {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .testimonial {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "card-one card-one"
+        "card-two card-three"
+        "card-four card-four"
+        "card-five card-five";
+        margin: 80px 40px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .testimonial {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "card-one"
+        "card-two"
+        "card-three"
+        "card-four"
+        "card-five";
+        margin: 40px 20px;
+    }
+}
