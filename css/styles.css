@@ -26,7 +26,7 @@ body {
 .card {
     padding: 20px 40px 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 5px 5px 20px rgb(0 0 0 / 0.1);
 }
 
 .card-one {
